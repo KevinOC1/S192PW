@@ -8,15 +8,11 @@ use Illuminate\Support\Facades\Route;
 }); */
 
 
-//Ruta tipo VIEW
-Route::get('/', function () {
-    return view('inicio');
-})->name('rutainicio');
 
-Route::get('/form', function () {
-    return view('formulario');
-})->name('rutaformulario');
+//ruta tipo view
+Route::view('inicio', 'inicio') ->name ("inicio");
 
-Route::get('/clientes', function () {
-    return view('clientes');
-})->name('rutaclientes');
+Route::view('form', 'formulario') ->name ('formulario');
+
+Route::view('client', 'clientes') ->name ('clientes');
+
