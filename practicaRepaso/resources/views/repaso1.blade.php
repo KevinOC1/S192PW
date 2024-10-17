@@ -17,7 +17,7 @@
     </div>
     <div class="card-body text-justify">
       
-      <form action="{{ route('convert') }}" method="POST">
+      <form action=" " method="POST">
         @csrf
         {{-- Campo para ingresar el valor --}}
         <div class="mb-3">

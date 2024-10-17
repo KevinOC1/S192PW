@@ -25,7 +25,7 @@
         <p>122042888</p>    
         <p>S-192 </p>
 
-        <a href=" " class="btn btn-dark">Repaso 1</a>
+        <a href="{{ route('rutarepaso') }}" class="btn btn-dark">Repaso 1</a>
     
     </div>
 </body>

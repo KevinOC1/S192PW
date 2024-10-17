@@ -29,7 +29,6 @@
             </li>
           </ul>
         </nav>
-
         @yield('contenido')
         @yield('cliente')
 </body>
