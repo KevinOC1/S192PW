@@ -1,10 +1,8 @@
-
-
 @extends('layouts.plantilla1')
 
+@section('titulo','Clientes')
 
-@section('titulo','clientes')
-@section('cliente')
+@section('contenido')
 
 
       {{-- tarjetacliente --}}
@@ -13,11 +11,11 @@
       <div class="card text-justify font-monospace">
 
         <div class="card-header fs-5 text-primary">
-          Ordaz Cuevas Kevin Isaac
+          Gael Arriaga Felipe
         </div>
         <div class="card-body">
           <h5 class="fw-bold">kioc989@gmail.com</h5>
-          <h5 class="fw-medium">4225673290</h5>
+          <h5 class="fw-medium">4425673290</h5>
           <p class="card-text fw-lighter"></p>
 
         </div>
@@ -28,4 +26,7 @@
         </div>
 
       </div>
+      {{-- finaliza tarjetacliente --}}
+      </div>
+
       @endsection
