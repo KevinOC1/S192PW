@@ -28,7 +28,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <p>      3422      </p>
-        <a class="navbar-brand" href="{{route('rutaprincipal')}}">INICIO</a>
+        <a class="navbar-brand" href="{{route('rutaprincipal')}}">Libros chilos</a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -38,7 +38,7 @@
           <ul class="navbar-nav">
 
             <li class="nav-item active">
-              <a class="nav-link" href="{{route('rutaregistro')}}">REGISTRO <span class="sr-only"></span></a>
+              <a class="nav-link" href="{{route('rutaregistro')}}">{{__('REGISTRO')}} <span class="sr-only"></span></a>
             </li>
 
           </ul>
