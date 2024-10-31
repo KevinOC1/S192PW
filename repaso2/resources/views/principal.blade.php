@@ -2,8 +2,8 @@
 @section('contenido')
 
 <div class="d-flex flex-column justify-content-center align-items-center text-center full-height">
-        <h1 class="display-1">Noticia literaria</h1>
-        <p>los libros son hechos con papel</p>
+        <h1 class="display-1">Noticias literarias</h1>
+        <p>Consulta las noticias mas importantes aqui</p>
         
     
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
