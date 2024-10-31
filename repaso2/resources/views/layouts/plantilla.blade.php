@@ -55,7 +55,7 @@
     <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Kevin.O</a></li>
     <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"> <span id="fecha"></span> </a></li>
   </ul>
-  <p class="text-center text-muted">© 2022 Compañía, Inc.</p>
+  <p class="text-center text-muted">© 2024 libros chilos, Inc.</p>
 </footer>
 </div>
 <script>

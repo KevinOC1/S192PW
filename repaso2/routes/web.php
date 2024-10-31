@@ -6,3 +6,5 @@ use App\Http\Controllers\controladorvistas;
 Route::get('/',[controladorvistas::class, 'principal'])->name('rutaprincipal');
 
 Route::get('/re', [controladorvistas::class, 'registro'])->name('rutaregistro');
+
+Route::post('/registrarlibro', [controladorvistas::class, 'registrarlibro'])->name('rutare');
