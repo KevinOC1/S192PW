@@ -1,10 +1,22 @@
 @extends('layouts.plantilla')
 @section('contenido')
 
+
 <div class="container">
+
+
   <form action="registrarlibro" method="POST" class="mx-auto" style="max-width: 600px;">
   @csrf 
-
+  @if (session('exito'))
+            <x-Alert tipo="success"> {{ session('exito') }} </x-Alert>
+            <script>
+              Swal.fire({
+                title: "Respuesta",
+                 text: '{{ session('exito') }}',
+                 icon: "success"
+                });
+            </script>
+           @endsession
   <div class="form-group row">
       <label for="inputvehiculo" class="col-sm-3 col-form-label text-right">ISBN</label>
       <div class="col-sm-9">
