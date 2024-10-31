@@ -9,6 +9,11 @@
     <style>
     </style>
 </head>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    $('#carouselExampleControls').carousel();
+  });
+</script>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="{{route('rutaprincipal')}}">inicio</a>
