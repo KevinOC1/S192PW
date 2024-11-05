@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    @vite(['resources/js/app.js']) 
     <title>Document</title>
-    @vite(['resources/app.js'])
+    
 </head>
 <body>
 
@@ -13,7 +14,7 @@
 
     <div class="container  col-md-4">
 
-    <form action="registrarusuario" method="POST" class="mx-auto" style="max-width: 600px;">
+    <form action="rutare" method="POST" class="mx-auto" style="max-width: 600px;">
   @csrf 
 
   @if (session('exito'))
@@ -47,9 +48,8 @@
             <small class="fst-italic text-danger" >{{$errors->first('txtedad')}}</small>
         </div>
         
-        <div class="form-group row">
-      <div class="col-sm-12 text-center">
-        <button type="" class="btn btn-danger "> Guardar Usuario</button>
+        
+        <button type="submit" class="btn btn-danger "> Guardar Usuario</button>
 
 
 </div>
