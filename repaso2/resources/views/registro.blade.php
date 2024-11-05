@@ -6,7 +6,7 @@
             <script>
               Swal.fire({
                 title: "Respuesta",
-                 text: '{{ session('exito') }}',
+                 text: '  ',
                  icon: "success"
                 });
             </script>
