@@ -14,7 +14,7 @@
 
     <div class="container  col-md-4">
 
-    <form action="rutare" method="POST" class="mx-auto" style="max-width: 600px;">
+    <form action="registrarusuaros" method="POST" class="mx-auto" style="max-width: 600px;">
   @csrf 
 
   @if (session('exito'))
