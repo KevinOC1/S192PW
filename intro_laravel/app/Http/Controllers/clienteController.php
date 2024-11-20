@@ -76,6 +76,7 @@ class clienteController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $id->delete();
+        
     }
 }
