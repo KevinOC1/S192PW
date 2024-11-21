@@ -66,9 +66,23 @@ class clienteController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'txtnombre' => 'required|min:3|max:255',
+            'txtapellido' => 'required|min:3|max:255',
+            'txtcorreo' => 'required|email:rfc,dns' ,
+            'txttelefono' => 'required|numeric'
+        ]);
+
+        DB::table('clientes')->where('id',$id)->update([
+            'nombre'=>$request->input('nombre'),
+            'apellido'=>$request->input('apellido'),
+            'correo'=>$request->input('correo'),
+            'telefono'=>$request->input('telefono'),
+            'updated_at'=>now(),
+        ]);
+        return redirect()->route('rutaclientes')->whith('exito','se actualizo con exito');
     }
 
     /**
@@ -76,7 +90,11 @@ class clienteController extends Controller
      */
     public function destroy(string $id)
     {
-        $id->delete();
+       DB:: table('clientes')->where('id',$id)->delete();
+       session()->flash('exito','se eliminio el cliente');
+        return redirect()->route('rutaclientes');
+
+
         
     }
 }

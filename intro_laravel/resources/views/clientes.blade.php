@@ -7,6 +7,19 @@
 
       {{-- tarjetacliente --}}
       <div class="container mt-5 col-md-8">
+      @session('exito')
+            <x-Alert tipo="danger"> {{ $value }} </x-Alert>
+            @endsession
+
+            @session('exito')
+            <script>
+              Swal.fire({
+                title: "Respuesta servidor",
+                 text: '{{ $value }}',
+                 icon: "success"
+                });
+            </script>
+            @endsession
 
         @foreach ($consultarClientes as $cliente)
 
@@ -23,16 +36,13 @@
         </div>
 
         <div class="card-footer text-muted">
-          <button type="submit" class="btn btn-warning btn-sm">{{__('Actualizar')}}</button>
-
-          <form action="{{ route('rutadel' ) }}" method="POST">
-            @csrf
-             @method('delete')
-            <button type="submit">Eliminar</button>
-          </form>
-
-          <button type="submit" class="btn btn-danger btn-sm">{{__('Eliminar')}}</button>
-        </div> 
+                <a href="{{route('rutaedit', $cliente->id)}}" class="btn btn-warning btn-sm">Actualizar</a>
+                <form action="{{route('rutadestroy',$cliente->id)}}" method="POST" style="display:inline-block;" onsubmit="return confirm('Estas apunto de eliminar a este usuario?');">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                </form>
+            </div>
 
       </div>
       {{-- finaliza tarjetacliente --}}

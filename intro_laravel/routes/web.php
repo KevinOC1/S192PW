@@ -20,7 +20,11 @@ Route::post('/cliente', [clienteController::class, 'store'])->name('enviaCliente
 
 Route::get('/clientes', [clienteController::class, 'index'])->name('rutaclientes');
 
-Route::delete('/cliente/delete', [clienteController::class, 'destroy'])->name('rutadel');
+Route::delete('/cliente/{id}', [clienteController::class, 'destroy'])->name('rutadestroy');
+
+Route::get('/cliente/{id}/edit', [clienteController::class, 'edit'])->name('rutaedit');
+
+Route::put('/cliente/{id}', [clienteController::class, 'update'])->name('rutaupd');
 
 //ruta tipo get
 /* Route::get('/', function () {
