@@ -2,20 +2,20 @@
 
 namespace App\Http\Controllers;
 
-
-use Illuminate\Http\Request;
 use App\Http\Requests\validador;
+use Illuminate\Http\Request;
 
-class controladorpeticiones extends Controller
+
+class controlapeticiones extends Controller
 {
     
-    public function formUsuario(){
-        return view('formUsuario');
+    public function inicio(){
+        return view('formUsuarios');
     }
-    public function inicioC(validador $peticionvalidada){
+    public function inicioC(validador $request){
 
         
-        $usuario= $peticionvalidada->input('txtcorreo');
+        $usuario = $request->input('txtcorreo');
 
         session()->flash('exito','se guardo el usuario '.$usuario);
         return to_route('rutaform');

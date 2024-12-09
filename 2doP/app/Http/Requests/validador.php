@@ -23,7 +23,7 @@ class validador extends FormRequest
     {
         return [
             'txtcorreo' => 'required|email:rfc,dns' ,
-            'txtcontrasña' => 'required|min:3|max:50',
+            'txtcontraseña' => 'required|min:3|max:50',
             'txtedad' => 'required|min:3|max:255',
         ];
     }
